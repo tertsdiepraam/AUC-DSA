@@ -48,6 +48,17 @@ int gcd(int a, int b) {
 }
 
 int gcd(int a, int b) {
+    while (b != 0) {
+        // Swapping variables without an extra variable
+        a = b + a;
+        b = a - b;
+        a = a - b;
+        b = b%a;
+    }
+    return a;
+}
+
+int gcd(int a, int b) {
     if (b == 0) {
         return a;
     } else {
