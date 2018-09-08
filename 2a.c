@@ -9,7 +9,7 @@ int max2(int a, int b) {
     }
 }
 
-#include <stdlib.c>
+#include <stdlib.h>
 int max2(int a, int b) {
     return (a+b + abs(a-b)) / 2;
 }
