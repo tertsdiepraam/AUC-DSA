@@ -55,8 +55,8 @@ int q_O2() {
 // out: the index of the key if it is found, or -1 if it is not found.
 int linear_search_count(int* a, int n, int key, int* cmp) {
     for (int i=0; i<n; i++) {
+        (*cmp)++;
         if (a[i] == key) {
-            *cmp = i+1;
             return i;
         }
     }
@@ -77,14 +77,6 @@ int linear_search_count(int* a, int n, int key, int* cmp) {
 //     the index k of the element to move to the front.
 // side effect: the array is reshuffled so that the items at indices 0,1,...,k
 //              now appear at indices 1,2,...,k,0 respectively.
-// [0, 1, 2, 3]
-// [3, 1, 2, 0]
-// [3, 0, 2, 1]
-// [3, 0, 1, 2]
-
-// [0, 1, 2]
-// [2, 1, 0]
-// [2, 0, 1]
 void move_to_front(int* a, int k) {
     for (int i=0; i<k; i++) {
         int tmp = a[i];
