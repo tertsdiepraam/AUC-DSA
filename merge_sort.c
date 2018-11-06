@@ -1,16 +1,5 @@
 #include "merge_sort.h"
 #include <stdlib.h>
-#include <stdio.h>
-void printy_list(List lst) {
-  printf("[");
-  int first = 1;
-  while (lst!=NULL) {
-    if (first) { first = 0; } else { printf(","); }
-    printf("%d", lst->item);
-    lst = lst->next;
-  }
-  printf("]");
-}
 // Step 1:
 // We write a function that calculates the length of a given linked list.
 //
